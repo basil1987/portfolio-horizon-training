@@ -1,0 +1,20 @@
+- hosts: webservers
+  remote_user: ubuntu
+  become_user: root
+  become_method: sudo
+  become: yes
+  tasks:
+    - name: Make sure that nginx is installed
+      apt:
+        name: nginx
+        update_cache: yes
+        state: latest
+    - name: Make sure that nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    - name: make sure that website is present in /var/www/html
+      copy:
+        src: /root/portfolio-horizon-training/webcontent
+        dest: /var/www/html

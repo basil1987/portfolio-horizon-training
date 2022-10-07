@@ -1,4 +1,4 @@
-- hosts: tag_App_portfolio_webserver
+- hosts: tag_type_webserver
   remote_user: ubuntu
   become_user: root
   become_method: sudo

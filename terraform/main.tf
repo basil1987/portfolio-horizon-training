@@ -47,7 +47,7 @@ resource "aws_instance" "web001" {
   ami           = "ami-0851b76e8b1bce90b"
   instance_type = "t2.micro"
   vpc_security_group_ids = [ aws_security_group.webservers.id ]
-  key_name = "basilmac"
+  key_name = "priceline-ansible-demo"
   tags = {
     Name = "Web-${count.index + 1}"
     type = "webserver"

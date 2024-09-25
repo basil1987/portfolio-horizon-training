@@ -16,5 +16,5 @@
         enabled: yes
     - name: make sure that website is present in /var/www/html
       copy:
-        src: /root/portfolio-horizon-training/webcontent
+        src: /home/ubuntu/portfolio-horizon-training/webcontent
         dest: /var/www/html
